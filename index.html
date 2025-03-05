@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-to-Speech Converter</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ayush-Text-to-Speech Converter</h1>
+        
+        <textarea id="textInput" placeholder="Enter text to convert to speech..."></textarea>
+        
+        <div id="controls">
+            <select id="voiceSelect"></select>
+            <button id="speakButton" class="btn btn-speak">
+                <i class="fas fa-play"></i> Speak
+            </button>
+            <button id="pauseButton" class="btn btn-pause">
+                <i class="fas fa-pause"></i> Pause
+            </button>
+            <button id="resumeButton" class="btn btn-resume">
+                <i class="fas fa-play-circle"></i> Resume
+            </button>
+            <button id="stopButton" class="btn btn-stop">
+                <i class="fas fa-stop"></i> Stop
+            </button>
+        </div>
+
+        <div class="slider-container">
+            <label for="volumeControl">Volume</label>
+            <div class="slider-wrapper">
+                <input type="range" id="volumeControl" class="slider-control" min="0" max="1" step="0.1" value="1">
+                <span id="volumeValue" class="value-display">100%</span>
+            </div>
+        </div>
+
+        <div class="slider-container">
+            <label for="rateControl">Speed</label>
+            <div class="slider-wrapper">
+                <input type="range" id="rateControl" class="slider-control" min="0.1" max="2" step="0.1" value="1">
+                <span id="rateValue" class="value-display">1x</span>
+            </div>
+        </div>
+
+        <div class="slider-container">
+            <label for="pitchControl">Pitch</label>
+            <div class="slider-wrapper">
+                <input type="range" id="pitchControl" class="slider-control" min="0" max="2" step="0.1" value="1">
+                <span id="pitchValue" class="value-display">1x</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
